@@ -4,9 +4,11 @@
 <h1>Home</h1>
 <div>
     <div>
+        <a href="{% url 'create-room' %}">create room</a>
         {% for room in rooms %}
         <div>
-            <p>@{{room.host.username}}</p>
+
+            <p>@{{room.host.username}} <a href="{% url 'update-room' room.id %}">edit</a> <a href="{% url 'delete-room' room.id%}">delete</a></p>
             <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
 
             <small>{{room.topic.name}}</small>
