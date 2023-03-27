@@ -1,4 +1,7 @@
 <nav>
     <a href="/">Study</a>
-    <hr>
+    
+    <form method="GET" accept="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search Rooms...">
+    </form>
 </nav>
